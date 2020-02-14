@@ -65,7 +65,7 @@ Are you looking at installing and deploying REANA cluster locally on your laptop
 
       $ kubectl exec \
             -ti $(kubectl get pods -l=app=server -o jsonpath='{.items[0].metadata.name}') \
-            -- flask users create \
+            -- invenio reana-users create \
                   -e jane.doe@example.org \
                   --admin-access-token $REANA_ACCESS_TOKEN
       User was successfully created.
